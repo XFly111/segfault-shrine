@@ -15,7 +15,11 @@ export function ErrorInput({
 }: ErrorInputProps) {
   return (
     <section className={styles.wrapper}>
-      <p className={styles.label}>Paste your error log below</p>
+      <p className={styles.label}>
+        <span>// 粘贴错误日志</span>
+        <span className={styles.labelDivider}>·</span>
+        <span>PASTE YOUR ERROR LOG BELOW</span>
+      </p>
       <textarea
         className={`${styles.input} ${isError ? styles.error : ""}`}
         value={value}
@@ -25,7 +29,7 @@ export function ErrorInput({
         spellCheck={false}
       />
       <p className={styles.feedback}>
-        {isError ? "[ERROR] No code sacrifice detected." : "The Shrine accepts stack traces, logs, and vague panic."}
+        {isError ? "[ERROR] 未发现可献祭的代码。" : "The Shrine accepts stack traces, logs, and vague panic."}
       </p>
     </section>
   );

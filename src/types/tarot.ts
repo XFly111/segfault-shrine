@@ -7,6 +7,8 @@ export type AppStatus =
 
 export type CardTone = "oracle" | "data" | "panic";
 
+export type CardOrientation = "upright" | "reversed";
+
 export type BugCategory =
   | "type"
   | "nullish"
@@ -39,11 +41,13 @@ export type TarotCard = {
 export type TarotVisualCard = Pick<
   TarotCard,
   "id" | "roman" | "symbol" | "name" | "subtitle" | "tone"
->;
+> & {
+  orientation?: CardOrientation;
+};
 
 export type DrawnCard = {
   card: TarotCard;
-  orientation: "upright" | "reversed";
+  orientation: CardOrientation;
 };
 
 export type Reading = {

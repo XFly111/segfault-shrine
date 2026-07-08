@@ -1,16 +1,36 @@
 .actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 12px;
 }
 
 .actions > * {
-  flex: 1 1 180px;
+  flex: 0 1 176px;
+}
+
+.feedback {
+  flex-basis: 100%;
+  margin: 4px 0 0;
+  font: 500 0.8rem/1.5 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+.success {
+  color: var(--color-runtime);
+}
+
+.error {
+  color: var(--color-panic);
 }
 
 @media (max-width: 720px) {
   .actions {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
+  .actions > * {
+    flex-basis: auto;
   }
 }

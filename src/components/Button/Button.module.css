@@ -3,13 +3,15 @@
   padding: 0 16px;
   border-radius: 4px;
   border: 1px solid var(--color-stroke);
-  font: 500 0.84rem/1 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  font: 600 0.8rem/1 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
   text-transform: uppercase;
+  letter-spacing: 0;
   transition:
     transform 160ms ease,
     border-color 160ms ease,
     box-shadow 160ms ease,
-    color 160ms ease;
+    color 160ms ease,
+    background-color 160ms ease;
 }
 
 .button:hover:enabled {
@@ -28,11 +30,12 @@
 }
 
 .secondary {
-  background: rgba(24, 24, 27, 0.8);
+  background: rgba(24, 24, 27, 0.78);
   color: var(--color-text-secondary);
 }
 
 .secondary:hover:enabled {
   border-color: var(--color-oracle);
-  box-shadow: 0 0 18px rgba(168, 85, 247, 0.16);
+  color: var(--color-text-primary);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.12);
 }

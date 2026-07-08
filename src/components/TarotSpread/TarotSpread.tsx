@@ -5,15 +5,15 @@ import styles from "./TarotSpread.module.css";
 type TarotSpreadProps = {
   status: AppStatus;
   cards: TarotVisualCard[];
-  inputExcerpt: string;
+  traceValue: string;
 };
 
 export function TarotSpread({
   status,
   cards,
-  inputExcerpt,
+  traceValue,
 }: TarotSpreadProps) {
-  const activeInput = inputExcerpt.trim() || "No stack trace offered yet.";
+  const activeInput = traceValue.trim() || "No stack trace offered yet.";
 
   return (
     <section className={styles.wrapper}>
