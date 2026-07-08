@@ -1,0 +1,61 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.label {
+  margin: 0;
+  color: var(--color-text-muted);
+  font: 500 0.8rem/1.4 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  text-transform: uppercase;
+}
+
+.input {
+  min-height: 168px;
+  resize: vertical;
+  border: 1px solid var(--color-stroke);
+  border-radius: 4px;
+  background: rgba(24, 24, 27, 0.95);
+  color: var(--color-text-primary);
+  padding: 18px 16px;
+  font: 400 0.95rem/1.65 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-oracle);
+  box-shadow:
+    inset 0 0 0 1px rgba(216, 180, 254, 0.35),
+    0 0 22px rgba(168, 85, 247, 0.16);
+}
+
+.input:disabled {
+  opacity: 0.7;
+}
+
+.error {
+  border-color: var(--color-panic);
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.18);
+}
+
+.feedback {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font: 400 0.82rem/1.5 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+@media (max-width: 720px) {
+  .input {
+    min-height: 132px;
+    padding: 14px;
+  }
+}

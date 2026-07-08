@@ -36,3 +36,17 @@ See the docs folder for the full planning set.
 ## Next Phase
 
 The next step is scaffolding the frontend project and implementing the MVP in small, testable tasks.
+
+## Local Development
+
+```bash
+pnpm install
+pnpm dev
+```
+
+## Build Checks
+
+```bash
+pnpm lint
+pnpm build
+```

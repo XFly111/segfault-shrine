@@ -10,3 +10,7 @@ coverage
 *.log
 .DS_Store
 Thumbs.db
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+.codex/logs

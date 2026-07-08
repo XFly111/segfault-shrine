@@ -1,0 +1,67 @@
+.panel {
+  border: 1px solid var(--color-stroke);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 16%),
+    rgba(24, 24, 27, 0.92);
+  padding: 24px;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  color: var(--color-oracle-soft);
+  font: 600 0.78rem/1.4 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font: 600 2rem/1 "EB Garamond", Georgia, serif;
+}
+
+.summary {
+  margin: 14px 0 0;
+  color: var(--color-data);
+  font: 400 0.92rem/1.65 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+.body,
+.verdict {
+  margin: 16px 0 0;
+  color: var(--color-text-secondary);
+  font: 400 0.95rem/1.75 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.item {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 14px;
+}
+
+.itemText,
+.itemAdvice {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font: 400 0.92rem/1.7 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+.itemAdvice {
+  margin-top: 8px;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 18px;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+}

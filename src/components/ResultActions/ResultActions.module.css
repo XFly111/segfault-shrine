@@ -1,0 +1,16 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.actions > * {
+  flex: 1 1 180px;
+}
+
+@media (max-width: 720px) {
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

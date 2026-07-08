@@ -1,0 +1,37 @@
+.wrapper {
+  display: grid;
+  gap: 22px;
+}
+
+.traceBox {
+  border: 1px solid var(--color-stroke);
+  border-radius: 6px;
+  background: rgba(24, 24, 27, 0.86);
+  padding: 16px;
+}
+
+.traceLabel {
+  margin: 0 0 8px;
+  color: var(--color-text-muted);
+  font: 500 0.76rem/1.4 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  text-transform: uppercase;
+}
+
+.traceValue {
+  margin: 0;
+  color: var(--color-data);
+  font: 400 0.95rem/1.6 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  word-break: break-word;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

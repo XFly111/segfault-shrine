@@ -1,0 +1,104 @@
+.card {
+  aspect-ratio: 1 / 1.6;
+  perspective: 1400px;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 680ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.revealed {
+  transform: rotateY(180deg);
+}
+
+.faceBack,
+.faceFront {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  padding: 18px 16px 16px;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  border: 1px solid var(--color-stroke);
+  background: rgba(24, 24, 27, 0.94);
+  overflow: hidden;
+}
+
+.faceBack {
+  background:
+    radial-gradient(circle at center, rgba(168, 85, 247, 0.12), transparent 38%),
+    rgba(24, 24, 27, 0.96);
+}
+
+.faceFront {
+  transform: rotateY(180deg);
+}
+
+.backPattern {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.roman {
+  color: var(--color-text-muted);
+  font: 500 0.76rem/1 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+.symbol {
+  margin-top: 64px;
+  color: var(--card-accent);
+  font: 700 clamp(2.4rem, 5vw, 4rem) / 1 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+.title {
+  margin-top: auto;
+  color: var(--color-text-primary);
+  font: 600 1.22rem/1.1 "EB Garamond", Georgia, serif;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font: 400 0.74rem/1.45 "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  text-align: center;
+}
+
+.oracle {
+  --card-accent: var(--color-oracle-soft);
+}
+
+.oracle .faceFront,
+.oracle .faceBack {
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.14);
+}
+
+.data {
+  --card-accent: var(--color-data);
+}
+
+.data .faceFront,
+.data .faceBack {
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.14);
+}
+
+.panic {
+  --card-accent: var(--color-panic);
+}
+
+.panic .faceFront,
+.panic .faceBack {
+  box-shadow: 0 0 22px rgba(239, 68, 68, 0.14);
+}
